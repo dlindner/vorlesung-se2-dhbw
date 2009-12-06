@@ -30,6 +30,6 @@ public class CharacterCountCrawler extends DirectoryCrawler {
 
 	@Override
 	public String toString() {
-		return "Counted a total of " + this.totalCharacters + " characters.";
+		return "Counted a total of " + this.totalCharacters + " characters."; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 }

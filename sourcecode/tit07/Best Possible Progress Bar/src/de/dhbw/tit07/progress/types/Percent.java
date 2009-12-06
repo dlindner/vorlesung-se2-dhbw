@@ -60,7 +60,7 @@ public class Percent {
 		final int prime = 31;
 		int result = 1;
 		long temp;
-		temp = Double.doubleToLongBits(value);
+		temp = Double.doubleToLongBits(this.value);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -77,7 +77,7 @@ public class Percent {
 		if (getClass() != obj.getClass())
 			return false;
 		Percent other = (Percent) obj;
-		if (Double.doubleToLongBits(value) != Double
+		if (Double.doubleToLongBits(this.value) != Double
 				.doubleToLongBits(other.value))
 			return false;
 		return true;

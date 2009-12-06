@@ -32,7 +32,7 @@ public abstract class InternalProgress implements WorkUnit {
 	}
 
 	protected List<InternalProgress> getChildren() {
-		return children;
+		return this.children;
 	}
 
 	protected double getChildFactor() {
@@ -41,7 +41,7 @@ public abstract class InternalProgress implements WorkUnit {
 
 	protected abstract InternalProgress createChildProgress();
 
-	protected void addAsCompleted(InternalProgress child) {
+	protected void addAsCompleted() {
 		this.completionPercentage += getChildFactor();
 	}
 

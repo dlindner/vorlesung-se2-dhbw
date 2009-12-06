@@ -68,6 +68,6 @@ public class Task implements ProgressNotifier {
 	}
 
 	public void printStatistics() {
-		System.out.println("Task " + this.denotation + " took " + this.totalDuration + " milliseconds.");
+		System.out.println("Task " + this.denotation + " took " + this.totalDuration + " milliseconds."); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 }

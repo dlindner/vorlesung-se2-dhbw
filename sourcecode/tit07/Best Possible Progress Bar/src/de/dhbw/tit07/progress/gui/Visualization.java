@@ -20,7 +20,7 @@ public class Visualization implements ProgressListener {
 
 	public Visualization() {
 		super();
-		this.frame = new JFrame("We are making progress here");
+		this.frame = new JFrame("We are making progress here"); //$NON-NLS-1$
 		this.progress = new JProgressBar(0, PREFERRED_WIDTH);
 	}
 
@@ -40,12 +40,20 @@ public class Visualization implements ProgressListener {
 		this.frame.setVisible(true);
 	}
 
+	protected JFrame getFrame() {
+		return this.frame;
+	}
+
+	protected JProgressBar getProgress() {
+		return this.progress;
+	}
+
 	@Override
 	public void finished() {
 		EventQueue.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				Visualization.this.frame.setVisible(false);
+				getFrame().setVisible(false);
 			}
 		});
 	}
@@ -55,7 +63,7 @@ public class Visualization implements ProgressListener {
 		EventQueue.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				Visualization.this.progress.setValue((int) (percentage.getValue() * getExpansionFactor()));
+				getProgress().setValue((int) (percentage.getValue() * getExpansionFactor()));
 			}
 		});
 	}

@@ -22,8 +22,8 @@ public class RootProgress extends InternalProgress {
 	}
 
 	@Override
-	protected void addAsCompleted(InternalProgress child) {
-		super.addAsCompleted(child);
+	protected void addAsCompleted() {
+		super.addAsCompleted();
 		this.notifier.notifyNewProgress(
 				Percent.createFromFactor(getCompletionPercentage()));
 	}

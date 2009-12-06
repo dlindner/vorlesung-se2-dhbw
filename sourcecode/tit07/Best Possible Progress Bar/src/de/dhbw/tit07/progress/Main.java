@@ -3,9 +3,9 @@ package de.dhbw.tit07.progress;
 import java.io.File;
 
 import de.dhbw.tit07.progress.gui.Visualization;
-import de.dhbw.tit07.progress.model.WorkUnit;
 import de.dhbw.tit07.progress.model.Step;
 import de.dhbw.tit07.progress.model.Task;
+import de.dhbw.tit07.progress.model.WorkUnit;
 
 public final class Main {
 
@@ -15,7 +15,7 @@ public final class Main {
 
 	public static void main(String[] args) throws Exception {
 		Visualization gui = new Visualization();
-		Task determineCharacters = new Task("count the characters of all filenames");
+		Task determineCharacters = new Task("count the characters of all filenames"); //$NON-NLS-1$
 		determineCharacters.addProgressListener(gui);
 		determineCharacters.addSteps(new CrawlAndCount());
 		gui.show();

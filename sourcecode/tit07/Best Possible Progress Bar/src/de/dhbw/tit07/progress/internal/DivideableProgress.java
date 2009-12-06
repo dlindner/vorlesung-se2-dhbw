@@ -16,12 +16,12 @@ public class DivideableProgress extends InternalProgress {
 
 	@Override
 	public void finished() {
-		this.parent.addAsCompleted(this);
+		this.parent.addAsCompleted();
 	}
 
 	@Override
-	protected void addAsCompleted(InternalProgress child) {
-		super.addAsCompleted(child);
+	protected void addAsCompleted() {
+		super.addAsCompleted();
 		this.parent.reportPartialCompletion(getCompletionPercentage());
 	}
 
