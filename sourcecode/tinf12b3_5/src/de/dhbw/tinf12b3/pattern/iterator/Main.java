@@ -12,8 +12,8 @@ public class Main {
 		things.add(new Object());
 		things.add('c');
 
-		for (int i = 0; i < things.size(); i++) {
-			System.out.println(things.get(i));
+		for (Object each : things) {
+			System.out.println(each);
 		}
 	}
 }
