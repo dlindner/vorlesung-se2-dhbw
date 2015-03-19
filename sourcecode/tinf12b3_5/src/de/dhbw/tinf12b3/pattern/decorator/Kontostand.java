@@ -8,7 +8,7 @@ public class Kontostand extends Charakterzug {
 
 	@Override
 	public void handle() {
-		super.handle();
 		System.out.println("Bezahle Rechnungen.");
+		super.handle();
 	}
 }
