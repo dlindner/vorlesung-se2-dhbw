@@ -1,6 +1,7 @@
 package de.dhbw.tinf12b3.pattern.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Main {
@@ -12,8 +13,13 @@ public class Main {
 		things.add(new Object());
 		things.add('c');
 
-		for (Object each : things) {
+		final Iterator<Object> iterator = new RandomIterator<>(things);
+		while (iterator.hasNext()) {
+			Object each = iterator.next();
 			System.out.println(each);
 		}
+//		for (Object each : things) {
+//			System.out.println(each);
+//		}
 	}
 }
