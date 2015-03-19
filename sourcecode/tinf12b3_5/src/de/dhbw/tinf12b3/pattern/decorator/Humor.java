@@ -7,10 +7,12 @@ public class Humor extends Charakterzug {
 	}
 
 	@Override
-	public void handle() {
+	protected void handleVorher() {
 		System.out.println("*grins*");
-		super.handle();
-		System.out.println("*lach*");
 	}
 
+	@Override
+	protected void handleDanach() {
+		System.out.println("*lach*");
+	}
 }

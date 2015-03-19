@@ -7,8 +7,7 @@ public class Reinlichkeit extends Charakterzug {
 	}
 
 	@Override
-	public void handle() {
-		super.handle();
+	protected void handleDanach() {
 		System.out.println("Alles ist sauber und abgespült.");
 	}
 }

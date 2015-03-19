@@ -10,7 +10,17 @@ public abstract class Charakterzug extends Handlungsfähig {
 	}
 
 	@Override
-	public void handle() {
+	public final void handle() {
+		handleVorher();
 		this.nächstes.handle();
+		handleDanach();
+	}
+
+	protected void handleDanach() {
+		// leer
+	}
+
+	protected void handleVorher() {
+		// leer
 	}
 }
