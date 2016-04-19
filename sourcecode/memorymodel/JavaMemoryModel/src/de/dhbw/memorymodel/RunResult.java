@@ -11,15 +11,10 @@ public class RunResult {
 		this.s = s;
 	}
 	
-	public int r() {
-		return r;
+	@Override
+	public String toString() {
+		return "r:" + this.r + " s:" + this.s;
 	}
-	
-	public int s() {
-		return s;
-	}
-	
-	
 	
 	@Override
 	public int hashCode() {
@@ -44,10 +39,5 @@ public class RunResult {
 		if (s != other.s)
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "r:" + r() + " s:" + s();
 	}
 }
