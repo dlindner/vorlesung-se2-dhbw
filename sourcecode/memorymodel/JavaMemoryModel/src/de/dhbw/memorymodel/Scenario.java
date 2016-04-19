@@ -39,7 +39,7 @@ public abstract class Scenario {
 			Collections.shuffle(threads);
 			RunResult localResult = run.run(threads);
 			result.consider(localResult);
-			if (0 == i % 1000) {
+			if (0 == i % (iterations / 10)) {
 				System.out.print(".");
 			}
 		}
