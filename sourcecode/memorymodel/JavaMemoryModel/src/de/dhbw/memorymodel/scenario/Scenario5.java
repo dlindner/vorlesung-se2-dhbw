@@ -1,4 +1,4 @@
-package de.dhbw.memorymodel.scenario1;
+package de.dhbw.memorymodel.scenario;
 
 import java.util.Arrays;
 import java.util.List;

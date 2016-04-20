@@ -1,16 +1,16 @@
-package de.dhbw.memorymodel.scenario1;
+package de.dhbw.memorymodel.scenario;
 
 import java.util.Arrays;
 import java.util.List;
 
 import de.dhbw.memorymodel.Scenario;
 
-public class Scenario4 extends Scenario {
+public class Scenario3 extends Scenario {
 	
-	private int x;
-	private int y;
+	private volatile int x;
+	private volatile int y;
 	
-	public Scenario4() {
+	public Scenario3() {
 		super();
 		this.x = 0;
 		this.y = 0;
@@ -18,18 +18,14 @@ public class Scenario4 extends Scenario {
 	
 	public List<Thread> prepare() {
 		Thread thread1 = new Thread(() -> {
-			if (0 != y) {
-				x = 1;
-			}
-			if (x == y) {
+			x = 1;
+			if (0 == y) {
 				r = 1;
 			}
 		});
 		Thread thread2 = new Thread(() -> {
-			if (0 != x) {
-				y = 1;
-			}
-			if (x != y) {
+			y = 1;
+			if (0 == x) {
 				s = 1;
 			}
 		});

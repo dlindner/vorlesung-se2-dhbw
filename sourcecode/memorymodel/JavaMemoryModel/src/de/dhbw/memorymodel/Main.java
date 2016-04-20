@@ -1,10 +1,10 @@
 package de.dhbw.memorymodel;
 
-import de.dhbw.memorymodel.scenario1.Scenario1;
-import de.dhbw.memorymodel.scenario1.Scenario2;
-import de.dhbw.memorymodel.scenario1.Scenario3;
-import de.dhbw.memorymodel.scenario1.Scenario4;
-import de.dhbw.memorymodel.scenario1.Scenario5;
+import de.dhbw.memorymodel.scenario.Scenario1;
+import de.dhbw.memorymodel.scenario.Scenario2;
+import de.dhbw.memorymodel.scenario.Scenario3;
+import de.dhbw.memorymodel.scenario.Scenario4;
+import de.dhbw.memorymodel.scenario.Scenario5;
 
 public class Main {
 	
